@@ -1,0 +1,22 @@
+{
+    "name": "emmadonjo/laravel-filter",
+    "description": "A laravel package to asily adding filtering to your eloquent models and queries",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "orchestra/testbench": "^9.4",
+        "phpstan/phpstan": "^1.12"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Emmadonjo\\LaravelFilter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joshua Emmanuel",
+            "email": "jo4christ48@yahoo.com"
+        }
+    ]
+}
