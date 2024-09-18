@@ -1,6 +1,6 @@
 {
     "name": "emmadonjo/laravel-filter",
-    "description": "A laravel package to asily adding filtering to your eloquent models and queries",
+    "description": "A laravel package to easily add filtering to your eloquent queries",
     "type": "library",
     "require": {
         "php": ">=8"
