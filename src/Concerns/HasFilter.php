@@ -11,9 +11,9 @@ trait HasFilter
 {
     /**
      * Apply filters to the given query
-     * @param Builder<Model> $builder
+     * @param Builder<covariant Model> $builder
      * @param array<string, string|int|bool|float|array<int, mixed>|null> $filters
-     * @return Builder<Model>
+     * @return Builder<covariant Model>
      */
     public function scopeFilter(Builder $builder, array $filters): Builder
     {
