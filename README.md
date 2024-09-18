@@ -25,7 +25,7 @@ Install via:
     ...
 
     use Emmadonjo\LaravelFilter\Contracts\Filterable;
-    use Emmadonjo\LaravelFilter\Concenrns\HasFilter;
+    use Emmadonjo\LaravelFilter\Concerns\HasFilter;
 
     class Post extends Model implements Filterable
     {
@@ -34,8 +34,8 @@ Install via:
         public function filterableColumns(): array
         {
             return [
-                'slug', 
-                'author_id', 
+                'slug',
+                'author_id',
                 'status'
             ];
         }
@@ -45,12 +45,12 @@ Install via:
     // filter posts
     $filters = ['author_id' => 1, 'status' => 'published'];
 
-    Post::filter($filters);
+    Post::filter($filters)->get();
 
     // filter a posts column with multiple possible values
     $filters = ['status' => ['scheduled', 'draft']];
 
-    Post::filter($filters);
+    Post::filter($filters)->get();
 
     // combine both
     $filters = [
@@ -58,15 +58,17 @@ Install via:
         'author_id' => 1
     ];
 
-    Post::filter($filters);
+    Post::filter($filters)->get();
 ```
 
-
 ## Changelog
+
 Kindly see the [releases](https://github.com/emmadonjo/laravel-filter/releases) for more information on what has changed recently.
 
 ## Contributing
+
 Pull requests are highly welcomed. Ensure you follow the PSR coding standards and meet static analysis level of 9.
 
 ## License
+
 The MIT License (MIT). Please see [LICENSE](https://github.com/emmadonjo/laravel-filter/blob/master/LICENSE.md) for details.
