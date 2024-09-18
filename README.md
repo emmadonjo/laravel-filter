@@ -47,7 +47,7 @@ Install via:
 
     Post::filter($filters)->get();
 
-    // filter a posts column with multiple possible values
+    // filter a post's column with multiple possible values
     $filters = ['status' => ['scheduled', 'draft']];
 
     Post::filter($filters)->get();

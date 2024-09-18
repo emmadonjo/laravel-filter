@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tests;
 
 use Tests\TestCase;
-use Tests\Mocks\Post;
 
 class FilterTest extends TestCase
 {
