@@ -23,9 +23,13 @@ trait HasFilter
 
         $columns = $this->filterableColumns();
 
+        if (empty($columns) || !is_array($columns)) {
+            return $builder;
+        }
+
         foreach ($filters as $column => $value) {
-            if ($value === '' || is_null($value)) {
-                return $builder;
+            if (($value === '') || ($value === null)) {
+                continue;
             }
 
             if (!in_array($column, $columns)) {
