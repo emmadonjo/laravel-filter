@@ -26,5 +26,9 @@
             "name": "Joshua Emmanuel",
             "email": "jo4christ48@yahoo.com"
         }
-    ]
+    ],
+  "scripts": {
+    "test": "./vendor/bin/phpunit --coverage-text",
+    "analyze": "./vendor/bin/phpstan analyze"
+  }
 }
