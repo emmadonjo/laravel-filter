@@ -10,4 +10,9 @@ use Emmadonjo\LaravelFilter\Contracts\Filterable;
 class Article extends Model implements Filterable
 {
     use HasFilter;
+
+    public function filterableColumns(): array
+    {
+        return [];
+    }
 }
