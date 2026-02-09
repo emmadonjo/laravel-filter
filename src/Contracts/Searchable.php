@@ -3,14 +3,15 @@
 namespace Emmadonjo\LaravelFilter\Contracts;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 interface Searchable
 {
     /**
      * Search records that contain the given search term.
-     * @param Builder $builder
+     * @param Builder<covariant Model> $builder
      * @param string|null $searchTerm
-     * @return Builder
+     * @return Builder<covariant Model>
      */
     public function scopeSearch(Builder $builder, ?string $searchTerm = null): Builder;
 
