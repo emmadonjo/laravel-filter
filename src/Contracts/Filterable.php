@@ -17,4 +17,10 @@ interface Filterable
      * @return Builder<covariant Model>
      */
     public function scopeFilter(Builder $builder, array $filters): Builder;
+
+    /**
+     * A list of columns that can be filtered
+     * @return string[]
+     */
+    public function filterableColumns(): array;
 }

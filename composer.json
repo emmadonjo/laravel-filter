@@ -6,8 +6,8 @@
         "php": ">=8"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.3",
-        "orchestra/testbench": "^9.4",
+        "phpunit/phpunit": "^11.5",
+        "orchestra/testbench": "^9.8",
         "phpstan/phpstan": "^1.12"
     },
     "license": "MIT",
@@ -26,5 +26,9 @@
             "name": "Joshua Emmanuel",
             "email": "jo4christ48@yahoo.com"
         }
-    ]
+    ],
+  "scripts": {
+    "test": "./vendor/bin/phpunit --coverage-text",
+    "analyze": "./vendor/bin/phpstan analyze"
+  }
 }

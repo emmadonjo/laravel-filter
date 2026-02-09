@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests;
 
 
+use Tests\Models\Tag;
 use Tests\Models\Post;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Tests\Models\Article;
@@ -14,6 +15,8 @@ abstract class TestCase extends BaseTestCase
 
     protected Post $post;
     protected Article $article;
+
+    protected Tag $tag;
 
     protected function setUp(): void
     {
@@ -40,5 +43,6 @@ abstract class TestCase extends BaseTestCase
     {
         $this->post = new Post();
         $this->article = new Article();
+        $this->tag = new Tag();
     }
 }
